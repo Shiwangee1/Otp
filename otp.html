@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: auto;
+            background-color: bisque;
+        }
+        div{
+            border: 2px  solid red;
+            background-color: blue;
+            padding: 3%;
+            text-align: center;
+        }
+        h1{
+            border: 3px solid greenyellow;
+            background-color:green;
+            font-size: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="">UserName</label>
+        <input type="text" id="input1">
+        <br><br>
+        <label for="">PHONE NUMBER</label>
+        <input type="text" id="ph">
+        <br><br>
+        <button onclick="sendotp()">send otp</button>
+        <h2 id="output">  </h2>
+        
+    </div>
+    <script>
+    function sendotp()
+    {
+       var res= Math.random()*(9999-1000)+1000
+       var otp=Math.floor(res)
+         console.log(otp)
+         document.getElementById("output").innerHTML="dear custmor your otp is"+otp
+    }
+    </script>
+
+    
+</body>
+</html>
